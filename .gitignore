@@ -31,3 +31,4 @@ out/
 _probe*.py
 .DS_Store
 Thumbs.db
+panel.log
