@@ -88,11 +88,15 @@ docker compose --env-file .env up -d --build
 
 ## 4. Nối panel (Vercel)
 
-1. `cd site && npx vercel --prod` (xem `site/README.md`).
-2. Vercel project → Settings → Environment Variables:
+1. Import repo GitHub vào Vercel (tên project viết thường, ví dụ
+   `nhmt-autotiktok`). Repo có `vercel.json` ở root — Vercel tự build Next.js
+   từ `site/`, không đụng `worker.py`/`requirements.txt` (nhánh Python).
+   Chưa cần set Root Directory; nếu có set thì để `site` cũng được.
+2. `cd site && npx vercel --prod` thay thế cũng được (xem `site/README.md`).
+3. Vercel project → Settings → Environment Variables:
    - `WORKER_URL` = URL worker, ví dụ `https://tiktok-worker.onrender.com`
    - `WORKER_API_KEY` = đúng khóa đã set cho worker
-3. Deployments → Redeploy (env chỉ áp dụng khi redeploy).
+4. Deployments → Redeploy (env chỉ áp dụng khi redeploy).
 
 ## 5. Đăng nhập TikTok
 

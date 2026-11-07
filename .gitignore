@@ -25,6 +25,7 @@ __pycache__/
 node_modules/
 .next/
 out/
+/package-lock.json
 
 # ===== tooling / OS =====
 _probe*.py
