@@ -1,0 +1,32 @@
+# ===== SECRET — không bao giờ upload =====
+cookies.json
+cookies.json.*
+cookies.enc
+secret.key
+config.json
+.env
+.env.*
+!.env.example
+site/.env.local
+
+# ===== dữ liệu runtime (tạo lại trên server) =====
+uids.json
+watchlist.json
+cooldowns.json
+*.log
+
+# ===== python =====
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ===== node / next =====
+node_modules/
+.next/
+out/
+
+# ===== tooling / OS =====
+_probe*.py
+.DS_Store
+Thumbs.db

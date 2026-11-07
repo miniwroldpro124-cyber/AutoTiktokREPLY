@@ -1,0 +1,17 @@
+services:
+  worker:
+    build: .
+    container_name: tiktok-worker
+    ports:
+      - "8787:8787"
+    environment:
+      - WORKER_PORT=8787
+      - WORKER_HOST=0.0.0.0
+      - BOT_DATA_DIR=/app/data
+      - WORKER_API_KEY=${WORKER_API_KEY:-}
+    volumes:
+      - bot-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  bot-data:

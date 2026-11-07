@@ -1,0 +1,16 @@
+# Không đưa secret/data vào build context docker
+.env
+.env.*
+cookies.json*
+cookies.enc
+secret.key
+config.json
+uids.json
+watchlist.json
+cooldowns.json
+*.log
+.venv/
+__pycache__/
+*.pyc
+site/
+.git/
